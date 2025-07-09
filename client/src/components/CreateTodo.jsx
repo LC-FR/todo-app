@@ -47,7 +47,7 @@ export function CreateTodo({ onAdd }) {
       />
       <button
         onClick={() => {
-          fetch("http://localhost:3001/todo", {
+          fetch("https://todo-app-kce1.onrender.com:3001/todo", {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
