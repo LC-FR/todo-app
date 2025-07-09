@@ -7,7 +7,7 @@ function App() {
   const [todos, settodos] = useState([]);
 
   function fetchTodos() {
-    fetch("http://localhost:3001/todos")
+    fetch("https://todo-app-kce1.onrender.com:3001/todos")
       .then(async res => {
         const json = await res.json();
         settodos(json.todos);
@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   function toggleCompleted(id) {
-    fetch("http://localhost:3001/toggle", {
+    fetch("https://todo-app-kce1.onrender.com:3001/toggle", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id })
@@ -34,7 +34,7 @@ function App() {
   }
 
   function deleteTodo(id) {
-    fetch("http://localhost:3001/delete", {
+    fetch("https://todo-app-kce1.onrender.com:3001/delete", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id })
