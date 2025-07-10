@@ -6,8 +6,9 @@ const cors = require("cors");
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: "http://localhost:5173" // Vite dev server
+  origin: ['http://localhost:5173', 'https://todo-india.vercel.app']
 }));
+
 
 // ✅ Add todo
 app.post("/todo", async function(req, res) {
